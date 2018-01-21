@@ -1,13 +1,17 @@
 $(function(){
-	//this code will execute after the DOM is loaded
+	
 });
 
-var carouselList = $("#carousel ul");
+	var carouselList = $("#carousel ul");
+	
+		setInterval(changeSlide, 3000);
+		
 
-setInterval(moveFirstSlide, 3000);
-
-carouselList.animate({'marginLeft':-400}, 500, moveFirstSlide);
-
+function changeSlide() {
+	
+	carouselList.animate({'marginLeft':-400}, 500, moveFirstSlide);
+	
+}
 
 function moveFirstSlide() {
   
@@ -16,5 +20,5 @@ function moveFirstSlide() {
 
     lastItem.after(firstItem) 
     carouselList.css({marginLeft:0});
-    
+   
 }
